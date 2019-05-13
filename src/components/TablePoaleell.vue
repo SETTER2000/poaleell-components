@@ -3,8 +3,8 @@
         <vue-good-table
                 :columns="pCols"
                 :rows="pRows"
-                :line-numbers="pNumeric"
                 :styleClass="pClass"
+                :line-numbers="pNumeric"
                 max-header="200px"
                 :fixed-header="pHeader"
         />
