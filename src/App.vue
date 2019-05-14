@@ -1,14 +1,14 @@
 <template>
     <div id="app">
        <!--ff: {{rws}}-->
-      <!--  <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-        <TablePoaleell pDataColumns="/data/columns.json" pDataRows="/data/rows2.json"  p-class="table table-striped" />
+      <!--  <img alt="Vue logo" src="./assets/logo.png">-->
+        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <!--<TablePoaleell pDataColumns="/data/columns.json" pDataRows="/data/rows2.json"  p-class="table table-striped" />-->
     </div>
 </template>
 
 <script>
-    // import HelloWorld from './components/HelloWorld.vue'
+    import HelloWorld from './components/HelloWorld.vue'
     import TablePoaleell from './components/TablePoaleell.vue'
 
     export default {
@@ -52,7 +52,7 @@
         },*/
 
         components: {
-            // HelloWorld,
+            HelloWorld,
            TablePoaleell
         }
     }
