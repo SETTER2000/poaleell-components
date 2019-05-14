@@ -1,6 +1,7 @@
 <template>
-    <div class="hello">
-
+    <div>
+<h3>{{msg}}</h3>
+        <hr>
         <el-select v-model="value" placeholder="Select">
             <el-option
                     v-for="item in options"
@@ -14,11 +15,12 @@
 </template>
 
 <script>
-    import {Button, Select,Option, Table, TableColumn} from 'element-ui'
+    import {Select, Option} from 'element-ui'
     import lang from 'element-ui/lib/locale/lang/ru-RU'
     import locale from 'element-ui/lib/locale'
     // import 'element-ui/lib/theme-chalk/index.css'
-    import 'element-ui/lib/theme-chalk/select.css'
+    // import 'element-ui/lib/theme-chalk/select.css'
+    import '../../public/styles/element-#F81C1C/select.css'
     // configure language
     locale.use(lang);
     // Vue.component(Button.name, Button);
@@ -27,60 +29,30 @@
     export default {
         name: 'HelloWorld',
         props: {
-            msg: String
-            // value:String
+            msg: String,
+            optSelect: Array,
+            val:String
         },
         data() {
-
             return {
-                options:
-                    [{
-                        value: 'Option1',
-                        label: 'Option1'
-                    }, {
-                        value: 'Option2',
-                        label: 'Option2'
-                    }, {
-                        value: 'Option3',
-                        label: 'Option3'
-                    }, {
-                        value: 'Option4',
-                        label: 'Option4'
-                    }, {
-                        value: 'Option5',
-                        label: 'Option5'
-                    }],
-                value:''
+                value: this.val,
+                options: this.optSelect
             }
 
         },
+        methods: {
+            getRows() {
+                return  this.options = this.optSelect;
+            },
+        },
         components: {
-            Button,
-            elSelect:Select,
-            Table,
-            TableColumn,
-            elOption:Option
+            elSelect: Select,
+            elOption: Option
+        },
+        mounted() {
+            this.getRows();
         }
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    h3 {
-        margin: 40px 0 0;
-    }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    a {
-        color: #42b983;
-    }
-</style>
