@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "label": "Name",
+      "field": "name"
+    },
+    {
+      "label": "Age",
+      "field": "age",
+      "type": "number"
+    },
+    {
+      "label": "Created On",
+      "field": "createdAt",
+      "type": "date",
+      "dateInputFormat": "YYYY-MM-DD",
+      "dateOutputFormat": "MMM Do YY"
+    },
+    {
+      "label": "Percent",
+      "field": "score",
+      "type": "percentage"
+    }
+  ]
+}
