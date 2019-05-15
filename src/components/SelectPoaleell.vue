@@ -12,11 +12,13 @@
 </template>
 
 <script>
+
     import {Select, Option} from 'element-ui'
     import lang from 'element-ui/lib/locale/lang/ru-RU'
     import locale from 'element-ui/lib/locale'
     import '../../styles/element-#F81C1C/select.css'
     locale.use(lang);
+
 
     export default {
         name: "SelectPoaleell",

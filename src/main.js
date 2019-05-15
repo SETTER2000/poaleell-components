@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+
 // import VueGoodTablePlugin from 'vue-good-table'
 Vue.config.productionTip = false;
 
