@@ -8,20 +8,24 @@
                     :value="item.value">
             </el-option>
         </el-select>
+
     </div>
 </template>
 
 <script>
-
+    import Vue from 'vue'
     import {Select, Option} from 'element-ui'
     import lang from 'element-ui/lib/locale/lang/ru-RU'
     import locale from 'element-ui/lib/locale'
-    import '../../styles/element-#F81C1C/select.css'
+    import '../../styles/element-#F81C1C/index.css'
     locale.use(lang);
+    import SelectPoaleell from './SelectPoaleell'
+    Vue.component('select-poaleell', SelectPoaleell);
+
 
 
     export default {
-        name: "SelectPoaleell",
+        //name: "select-poaleell",
         props: ['options'],
         data(){
             return{
@@ -31,7 +35,8 @@
         },
         methods:{
             getOptions(){
-                return this.option= this.options;
+                console.log('options', this.options);
+                return this.options= this.option;
             },
             changeValue(){
                // this.value = this.val;

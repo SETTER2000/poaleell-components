@@ -3,28 +3,28 @@
         <!--ff: {{rws}}-->
         <!--  <img alt="Vue logo" src="./assets/logo.png">-->
         <!--<HelloWorld msg="Welcome to Your Vue.js App" :opt-select="[...option]"/>-->
-        <SelectPoaleell  :options="[...option]"  @valChanged="value=$event"/>
+        <SelectPoaleell  :options="option"  @valChanged="value=$event"/>
 {{value}}
         <!--<TablePoaleell pDataColumns="/data/columns.json" pDataRows="/data/rows2.json"  p-class="table table-striped" />-->
     </div>
 </template>
 
 <script>
-    import Vue from 'vue'
-    import wrap from '@vue/web-component-wrapper'
+    // import Vue from 'vue'
+    // import wrap from '@vue/web-component-wrapper'
     // import SelectPoaleell from '~/components/SelectPoaleell.vue'
 
   /*  import HelloWorld from './components/HelloWorld.vue'
     import TablePoaleell from './components/TablePoaleell.vue'*/
-    // import SelectPoaleell from './components/SelectPoaleell.vue'
-    const SelectPoaleell = wrap(Vue, () => import(`./components/SelectPoaleell.vue`));
-    Vue.component('SelectPoaleell', SelectPoaleell);
-    const _customElementsDefine = window.customElements.define;
-    window.customElements.define = function(name, clazz, config) {
-        if (!customElements.get(name)) {
-            _customElementsDefine.call(window.customElements,'select-poaleell', SelectPoaleell, config);
-        }
-    };
+    import SelectPoaleell from './components/SelectPoaleell.vue'
+    // const SelectPoaleell = wrap(Vue, () => import(`./components/SelectPoaleell.vue`));
+    // Vue.component('select-poaleell', SelectPoaleell);
+    // const _customElementsDefine = window.customElements.define;
+    // window.customElements.define = function(name, clazz, config) {
+    //     if (!customElements.get(name)) {
+    //         _customElementsDefine.call(window.customElements,'select-poaleell', SelectPoaleell, config);
+    //     }
+    // };
     // window.customElements.define('select-poaleell', SelectPoaleell);
     export default {
         name: 'app',
@@ -84,14 +84,3 @@
         }
     }
 </script>
-
-<style>
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
-</style>
