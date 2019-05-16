@@ -3,8 +3,8 @@
         <!--ff: {{rws}}-->
         <!--  <img alt="Vue logo" src="./assets/logo.png">-->
         <!--<HelloWorld msg="Welcome to Your Vue.js App" :opt-select="[...option]"/>-->
-        <SelectPoaleell  :options="option"  @valChanged="value=$event"/>
-{{value}}
+        <select-poaleell :options="option"  @valChanged="val=$event"/>
+val: {{val}}
         <!--<TablePoaleell pDataColumns="/data/columns.json" pDataRows="/data/rows2.json"  p-class="table table-striped" />-->
     </div>
 </template>
@@ -17,6 +17,7 @@
   /*  import HelloWorld from './components/HelloWorld.vue'
     import TablePoaleell from './components/TablePoaleell.vue'*/
     import SelectPoaleell from './components/SelectPoaleell.vue'
+    // Vue.component('select-poaleell', SelectPoaleell);
     // const SelectPoaleell = wrap(Vue, () => import(`./components/SelectPoaleell.vue`));
     // Vue.component('select-poaleell', SelectPoaleell);
     // const _customElementsDefine = window.customElements.define;
@@ -30,10 +31,10 @@
         name: 'app',
         data() {
             return {
-                value:'',
+                val:'',
                 option: [{
-                    value: 'Option1',
-                    label: 'Option1'
+                    value: 'Option-11',
+                    label: 'Option-11'
                 }, {
                     value: 'Option2',
                     label: 'Option2'
@@ -80,7 +81,7 @@
         components: {
         /*    HelloWorld,
             TablePoaleell,*/
-            SelectPoaleell
+            'select-poaleell':SelectPoaleell
         }
     }
 </script>
